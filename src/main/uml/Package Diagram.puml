@@ -1,0 +1,110 @@
+@startuml
+
+namespace nl.han.oose.jellema.rick.data {
+namespace nl.han.oose.jellema.rick.data.database {
+    class nl.han.oose.jellema.rick.data.database.Database {
+        - connection : Connection
+        - databaseProperties : Properties
+        + createConnection()
+        + getConnection()
+        + setPropertiesFiles()
+    }
+  }
+  namespace nl.han.oose.jellema.rick.data.dao {
+    class nl.han.oose.jellema.rick.data.dao.PlaylistsDao {
+        - connection : Connection
+        + all()
+        + create()
+        + delete()
+        + edit()
+        + setDatabase()
+    }
+
+    namespace interfaces {
+          interface IPlaylistsDao <<Interface>> {
+              {abstract} + all()
+              {abstract} + create()
+              {abstract} + delete()
+              {abstract} + edit()
+          }
+    }
+
+  }
+  }
+
+  nl.han.oose.jellema.rick.data.dao.PlaylistsDao .left.|> nl.han.oose.jellema.rick.data.dao.interfaces.IPlaylistsDao
+  nl.han.oose.jellema.rick.data.dao.PlaylistsDao <-- nl.han.oose.jellema.rick.data.database.Database : database
+
+
+    namespace nl.han.oose.jellema.rick.services {
+    namespace nl.han.oose.jellema.rick.services.utils {
+        class nl.han.oose.jellema.rick.services.utils.PropertiesFiles {
+            - propertiesFile : Properties
+            - propertiesFileName : String
+            + getPropertiesFile()
+            + loadFile()
+          }
+        }
+
+      class Cache {
+          - cache : HashMap<String, UserDTO>
+          + addToCache()
+          + getUser()
+          + userExists()
+      }
+
+        class PlaylistService {
+            + addTrack()
+            + createPlaylist()
+            + deletePlaylist()
+            + deleteTrack()
+            + editPlaylist()
+            + getPlaylists()
+            + getTracksOfPlaylist()
+            + setCacheService()
+            + setPlaylistsDao()
+            + setTracksDao()
+        }
+
+            namespace interfaces {
+              interface ICache <<Interface>> {
+                  {abstract} + addToCache()
+                  {abstract} + getUser()
+                  {abstract} + userExists()
+              }
+
+              interface IPlaylistService <<Interface>> {
+                  {abstract} + addTrack()
+                  {abstract} + createPlaylist()
+                  {abstract} + deletePlaylist()
+                  {abstract} + deleteTrack()
+                  {abstract} + editPlaylist()
+                  {abstract} + getPlaylists()
+                  {abstract} + getTracksOfPlaylist()
+              }
+            }
+      }
+ nl.han.oose.jellema.rick.data.database.Database <-right- nl.han.oose.jellema.rick.services.utils.PropertiesFiles : loadProperties
+
+      nl.han.oose.jellema.rick.services.Cache .left.|> nl.han.oose.jellema.rick.services.interfaces.ICache
+      nl.han.oose.jellema.rick.services.PlaylistService .left.|> nl.han.oose.jellema.rick.services.interfaces.IPlaylistService
+      nl.han.oose.jellema.rick.services.PlaylistService <-- nl.han.oose.jellema.rick.data.dao.interfaces.IPlaylistsDao : playlistDao
+      nl.han.oose.jellema.rick.services.interfaces.ICache --> nl.han.oose.jellema.rick.services.PlaylistService : cache
+
+        namespace nl.han.oose.jellema.rick.resources {
+          class nl.han.oose.jellema.rick.resources.PlaylistResource {
+              + EditPlaylist()
+              + addTrackToPlaylist()
+              + createPlaylist()
+              + deletePlaylist()
+              + deleteTrackFromPlaylist()
+              + getPlaylists()
+              + getTracksOfPlaylist()
+              + setPlayListService()
+          }
+        }
+
+        nl.han.oose.jellema.rick.resources.PlaylistResource <-right- nl.han.oose.jellema.rick.services.interfaces.IPlaylistService : playlistService
+
+
+@enduml

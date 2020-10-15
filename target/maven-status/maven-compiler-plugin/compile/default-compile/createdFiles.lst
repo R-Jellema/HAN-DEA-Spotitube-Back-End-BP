@@ -1,0 +1,7 @@
+nl\han\oose\jellema\rick\services\LoginService.class
+nl\han\oose\jellema\rick\services\dto\PlaylistsDTO.class
+nl\han\oose\jellema\rick\services\dto\UserDTO.class
+nl\han\oose\jellema\rick\resource\PlaylistResource.class
+nl\han\oose\jellema\rick\services\dto\PlaylistDTO.class
+nl\han\oose\jellema\rick\resource\LoginResource.class
+nl\han\oose\jellema\rick\services\Cache.class

@@ -1,0 +1,54 @@
+@startuml
+
+Card card [
+    In de database.properties artifact
+    wordt de connectie url
+    voor de database genoteerd, waarin
+    ook de authenticatie gegevens staan.
+
+    Ook wordt in deze artifact de database
+    drivers genoteerd, zodat de Spotitube.war
+    de juiste drivers gebruikt om verbinding
+    te maken met de Database server
+]
+Node "<<Client Machine>>"{
+    Node Execution_Enviroment[
+        <<Execution Enviroment: Web browser>>
+    ]
+}
+
+Node "<<Windows 10 Version 1909 Build 18363.1139>>" {
+    Node "<<Microsoft SQL Server Version 2019 Build 150.2070.41>>"{
+        Database Spotitube[
+            <<Database>>
+            ---
+            Spotitube
+            ]
+    }
+
+}
+
+Node "<<Windows 10 Version 1909 Build 18363.1139>>" as B {
+    Node "<<Apache-Tomee-8.0.3-plus>>"{
+    artifact spotitube[
+        <<Artifact>>
+        ---
+        Spotitube.war
+    ]
+    artifact Database[
+        <<Artifact>>
+        ---
+        database.properties
+    ]
+}
+}
+
+
+
+B <..up.. Execution_Enviroment : <<protocol>> HTTP : 8080
+"<<Apache-Tomee-8.0.3-plus>>" .up.> "<<Microsoft SQL Server Version 2019 Build 150.2070.41>>" : <<Protocol>> TCP/IP :1433
+Database ..right.. card
+
+
+
+@enduml
