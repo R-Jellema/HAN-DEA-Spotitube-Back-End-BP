@@ -1,9 +1,9 @@
 @startuml
 
 
-namespace nl.han.oose.jellema.rick.data {
-namespace nl.han.oose.jellema.rick.data.database {
-    class nl.han.oose.jellema.rick.data.database.Database {
+namespace nl.han.oose.jellema.rick.datalayer {
+namespace nl.han.oose.jellema.rick.datalayer.database {
+    class nl.han.oose.jellema.rick.datalayer.database.Database {
         - connection : Connection
         - databaseProperties : Properties
         + createConnection()
@@ -14,8 +14,8 @@ namespace nl.han.oose.jellema.rick.data.database {
 
 
 
-  namespace nl.han.oose.jellema.rick.data.dao {
-    class nl.han.oose.jellema.rick.data.dao.PlaylistsDao {
+  namespace nl.han.oose.jellema.rick.datalayer.dao {
+    class nl.han.oose.jellema.rick.datalayer.dao.PlaylistsDao {
         - connection : Connection
         + setDatabase()
     }
@@ -32,11 +32,11 @@ namespace nl.han.oose.jellema.rick.data.database {
   }
   }
 
-  nl.han.oose.jellema.rick.data.dao.PlaylistsDao .left.|> nl.han.oose.jellema.rick.data.dao.interfaces.IPlaylistsDao
-  nl.han.oose.jellema.rick.data.dao.PlaylistsDao o-- nl.han.oose.jellema.rick.data.database.Database : database
+  nl.han.oose.jellema.rick.datalayer.dao.PlaylistsDao .left.|> nl.han.oose.jellema.rick.servicelayer.services.IPlaylistsDao
+  nl.han.oose.jellema.rick.datalayer.dao.PlaylistsDao o-- nl.han.oose.jellema.rick.datalayer.database.Database : database
 
 
-    namespace nl.han.oose.jellema.rick.services {
+    namespace nl.han.oose.jellema.rick.servicelayer {
     namespace utils {
         class PropertiesFiles {
             - propertiesFile : Properties
@@ -75,14 +75,14 @@ namespace nl.han.oose.jellema.rick.data.database {
               }
             }
       }
- nl.han.oose.jellema.rick.data.database.Database o-right- nl.han.oose.jellema.rick.services.utils.PropertiesFiles : loadProperties
-      nl.han.oose.jellema.rick.services.Cache .left.|> nl.han.oose.jellema.rick.services.interfaces.ICache
-      nl.han.oose.jellema.rick.services.PlaylistService .left.|> nl.han.oose.jellema.rick.services.interfaces.IPlaylistService
-      nl.han.oose.jellema.rick.services.PlaylistService o-- nl.han.oose.jellema.rick.data.dao.interfaces.IPlaylistsDao : playlistDao
-      nl.han.oose.jellema.rick.services.interfaces.ICache --o nl.han.oose.jellema.rick.services.PlaylistService : cache
+ nl.han.oose.jellema.rick.datalayer.database.Database o-right- nl.han.oose.jellema.rick.servicelayer.utils.PropertiesFiles : loadProperties
+      nl.han.oose.jellema.rick.servicelayer.Cache .left.|> nl.han.oose.jellema.rick.resourcelayer.ICache
+      nl.han.oose.jellema.rick.servicelayer.PlaylistService .left.|> nl.han.oose.jellema.rick.resourcelayer.IPlaylistService
+      nl.han.oose.jellema.rick.servicelayer.PlaylistService o-- nl.han.oose.jellema.rick.servicelayer.services.IPlaylistsDao : playlistDao
+      nl.han.oose.jellema.rick.resourcelayer.ICache --o nl.han.oose.jellema.rick.servicelayer.PlaylistService : cache
 
-        namespace nl.han.oose.jellema.rick.resources {
-          class nl.han.oose.jellema.rick.resources.PlaylistResource {
+        namespace nl.han.oose.jellema.rick.resourcelayer {
+          class nl.han.oose.jellema.rick.resourcelayer.PlaylistResource {
               + EditPlaylist()
               + addTrackToPlaylist()
               + createPlaylist()
@@ -94,7 +94,7 @@ namespace nl.han.oose.jellema.rick.data.database {
           }
         }
 
-        nl.han.oose.jellema.rick.resources.PlaylistResource o-right- nl.han.oose.jellema.rick.services.interfaces.IPlaylistService : playlistService
+        nl.han.oose.jellema.rick.resourcelayer.PlaylistResource o-right- nl.han.oose.jellema.rick.resourcelayer.IPlaylistService : playlistService
 
 
 @enduml

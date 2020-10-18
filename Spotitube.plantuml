@@ -2,288 +2,288 @@
 
 title __SPOTITUBE's Class Diagram__\n
 
-  namespace nl.han.oose.jellema.rick.data.dao {
-    class nl.han.oose.jellema.rick.data.dao.PlaylistsDao {
+  namespace nl.han.oose.jellema.rick.datalayer.dao {
+    class nl.han.oose.jellema.rick.datalayer.dao.PlaylistsDao {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.data.dao {
-    class nl.han.oose.jellema.rick.data.dao.TracksDao {
+  namespace nl.han.oose.jellema.rick.datalayer.dao {
+    class nl.han.oose.jellema.rick.datalayer.dao.TracksDao {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.data.dao {
-    class nl.han.oose.jellema.rick.data.dao.UserDao {
+  namespace nl.han.oose.jellema.rick.datalayer.dao {
+    class nl.han.oose.jellema.rick.datalayer.dao.UserDao {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.data.dao {
+  namespace nl.han.oose.jellema.rick.datalayer.dao {
     namespace interfaces {
-      interface nl.han.oose.jellema.rick.data.dao.interfaces.IPlaylistsDao {
+      interface nl.han.oose.jellema.rick.servicelayer.services.IPlaylistsDao {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.data.dao {
+  namespace nl.han.oose.jellema.rick.datalayer.dao {
     namespace interfaces {
-      interface nl.han.oose.jellema.rick.data.dao.interfaces.ITracksDao {
+      interface nl.han.oose.jellema.rick.servicelayer.services.ITracksDao {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.data.dao {
+  namespace nl.han.oose.jellema.rick.datalayer.dao {
     namespace interfaces {
-      interface nl.han.oose.jellema.rick.data.dao.interfaces.IUserDao {
+      interface nl.han.oose.jellema.rick.servicelayer.services.IUserDao {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.data.database {
-    class nl.han.oose.jellema.rick.data.database.Database {
+  namespace nl.han.oose.jellema.rick.datalayer.database {
+    class nl.han.oose.jellema.rick.datalayer.database.Database {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.resources {
-    class nl.han.oose.jellema.rick.resources.LoginResource {
+  namespace nl.han.oose.jellema.rick.resourcelayer {
+    class nl.han.oose.jellema.rick.resourcelayer.LoginResource {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.resources {
-    class nl.han.oose.jellema.rick.resources.PlaylistResource {
+  namespace nl.han.oose.jellema.rick.resourcelayer {
+    class nl.han.oose.jellema.rick.resourcelayer.PlaylistResource {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.resources {
-    class nl.han.oose.jellema.rick.resources.TrackResource {
+  namespace nl.han.oose.jellema.rick.resourcelayer {
+    class nl.han.oose.jellema.rick.resourcelayer.TrackResource {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.resources {
+  namespace nl.han.oose.jellema.rick.resourcelayer {
     namespace mappers {
-      class nl.han.oose.jellema.rick.resources.mappers.AuthenticationExceptionMapper {
+      class nl.han.oose.jellema.rick.resourcelayer.mappers.AuthenticationExceptionMapper {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.resources {
+  namespace nl.han.oose.jellema.rick.resourcelayer {
     namespace mappers {
-      class nl.han.oose.jellema.rick.resources.mappers.DatabaseExceptionMapper {
+      class nl.han.oose.jellema.rick.resourcelayer.mappers.DatabaseExceptionMapper {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.resources {
+  namespace nl.han.oose.jellema.rick.resourcelayer {
     namespace mappers {
-      class nl.han.oose.jellema.rick.resources.mappers.FileNotFoundExceptionMapper {
+      class nl.han.oose.jellema.rick.resourcelayer.mappers.FileNotFoundExceptionMapper {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.resources {
+  namespace nl.han.oose.jellema.rick.resourcelayer {
     namespace mappers {
-      class nl.han.oose.jellema.rick.resources.mappers.InvalidTokenExceptionMapper {
+      class nl.han.oose.jellema.rick.resourcelayer.mappers.InvalidTokenExceptionMapper {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.resources {
+  namespace nl.han.oose.jellema.rick.resourcelayer {
     namespace mappers {
-      class nl.han.oose.jellema.rick.resources.mappers.TrackDoesNotExistExceptionMapper {
+      class nl.han.oose.jellema.rick.resourcelayer.mappers.TrackDoesNotExistExceptionMapper {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
-    class nl.han.oose.jellema.rick.services.Cache {
+  namespace nl.han.oose.jellema.rick.servicelayer {
+    class nl.han.oose.jellema.rick.servicelayer.Cache {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
-    class nl.han.oose.jellema.rick.services.LoginService {
+  namespace nl.han.oose.jellema.rick.servicelayer {
+    class nl.han.oose.jellema.rick.servicelayer.LoginService {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
-    class nl.han.oose.jellema.rick.services.PlaylistService {
+  namespace nl.han.oose.jellema.rick.servicelayer {
+    class nl.han.oose.jellema.rick.servicelayer.PlaylistService {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
-    class nl.han.oose.jellema.rick.services.TokenDealer {
+  namespace nl.han.oose.jellema.rick.servicelayer {
+    class nl.han.oose.jellema.rick.servicelayer.TokenDealer {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
-    class nl.han.oose.jellema.rick.services.TracksService {
+  namespace nl.han.oose.jellema.rick.servicelayer {
+    class nl.han.oose.jellema.rick.servicelayer.TracksService {
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace dto {
-      class nl.han.oose.jellema.rick.services.dto.PlaylistDTO {
+      class nl.han.oose.jellema.rick.servicelayer.dto.PlaylistDTO {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace dto {
-      class nl.han.oose.jellema.rick.services.dto.PlaylistsDTO {
+      class nl.han.oose.jellema.rick.servicelayer.dto.PlaylistsDTO {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace dto {
-      class nl.han.oose.jellema.rick.services.dto.TrackDTO {
+      class nl.han.oose.jellema.rick.servicelayer.dto.TrackDTO {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace dto {
-      class nl.han.oose.jellema.rick.services.dto.TracksDTO {
+      class nl.han.oose.jellema.rick.servicelayer.dto.TracksDTO {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace dto {
-      class nl.han.oose.jellema.rick.services.dto.UserDTO {
+      class nl.han.oose.jellema.rick.servicelayer.dto.UserDTO {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace exceptions {
-      class nl.han.oose.jellema.rick.services.exceptions.AuthenticationException {
+      class nl.han.oose.jellema.rick.servicelayer.exceptions.AuthenticationException {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace exceptions {
-      class nl.han.oose.jellema.rick.services.exceptions.FileNotFoundException {
+      class nl.han.oose.jellema.rick.servicelayer.exceptions.FileNotFoundException {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace exceptions {
-      class nl.han.oose.jellema.rick.services.exceptions.InvalidTokenException {
+      class nl.han.oose.jellema.rick.servicelayer.exceptions.InvalidTokenException {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace exceptions {
-      class nl.han.oose.jellema.rick.services.exceptions.TrackDoesNotExistException {
+      class nl.han.oose.jellema.rick.servicelayer.exceptions.TrackDoesNotExistException {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace interfaces {
-      interface nl.han.oose.jellema.rick.services.interfaces.ICache {
+      interface nl.han.oose.jellema.rick.resourcelayer.ICache {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace interfaces {
-      interface nl.han.oose.jellema.rick.services.interfaces.ILoginService {
+      interface nl.han.oose.jellema.rick.resourcelayer.ILoginService {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace interfaces {
-      interface nl.han.oose.jellema.rick.services.interfaces.IPlaylistService {
+      interface nl.han.oose.jellema.rick.resourcelayer.IPlaylistService {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace interfaces {
-      interface nl.han.oose.jellema.rick.services.interfaces.ITokenDealer {
+      interface nl.han.oose.jellema.rick.resourcelayer.ITokenDealer {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace interfaces {
-      interface nl.han.oose.jellema.rick.services.interfaces.ITracksService {
+      interface nl.han.oose.jellema.rick.resourcelayer.ITracksService {
       }
     }
   }
   
 
-  namespace nl.han.oose.jellema.rick.services {
+  namespace nl.han.oose.jellema.rick.servicelayer {
     namespace utils {
-      class nl.han.oose.jellema.rick.services.utils.PropertiesFiles {
+      class nl.han.oose.jellema.rick.servicelayer.utils.PropertiesFiles {
       }
     }
   }
   
 
-  nl.han.oose.jellema.rick.data.dao.PlaylistsDao .up.|> nl.han.oose.jellema.rick.data.dao.interfaces.IPlaylistsDao
-  nl.han.oose.jellema.rick.data.dao.PlaylistsDao o-- nl.han.oose.jellema.rick.data.database.Database : database
-  nl.han.oose.jellema.rick.data.dao.TracksDao .up.|> nl.han.oose.jellema.rick.data.dao.interfaces.ITracksDao
-  nl.han.oose.jellema.rick.data.dao.TracksDao o-- nl.han.oose.jellema.rick.data.database.Database : database
-  nl.han.oose.jellema.rick.data.dao.UserDao .up.|> nl.han.oose.jellema.rick.data.dao.interfaces.IUserDao
-  nl.han.oose.jellema.rick.data.database.Database o-- nl.han.oose.jellema.rick.services.utils.PropertiesFiles : loadProperties
-  nl.han.oose.jellema.rick.resources.LoginResource o-- nl.han.oose.jellema.rick.services.interfaces.ILoginService : loginService
-  nl.han.oose.jellema.rick.resources.PlaylistResource o-- nl.han.oose.jellema.rick.services.interfaces.IPlaylistService : playListService
-  nl.han.oose.jellema.rick.resources.TrackResource o-- nl.han.oose.jellema.rick.services.interfaces.ITracksService : tracksService
-  nl.han.oose.jellema.rick.resources.mappers.AuthenticationExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
-  nl.han.oose.jellema.rick.resources.mappers.DatabaseExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
-  nl.han.oose.jellema.rick.resources.mappers.FileNotFoundExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
-  nl.han.oose.jellema.rick.resources.mappers.InvalidTokenExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
-  nl.han.oose.jellema.rick.resources.mappers.TrackDoesNotExistExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
-  nl.han.oose.jellema.rick.services.Cache .up.|> nl.han.oose.jellema.rick.services.interfaces.ICache
-  nl.han.oose.jellema.rick.services.LoginService .up.|> nl.han.oose.jellema.rick.services.interfaces.ILoginService
-  nl.han.oose.jellema.rick.services.LoginService o-- nl.han.oose.jellema.rick.services.interfaces.ICache : cache
-  nl.han.oose.jellema.rick.services.LoginService o-- nl.han.oose.jellema.rick.services.interfaces.ITokenDealer : dealer
-  nl.han.oose.jellema.rick.services.PlaylistService .up.|> nl.han.oose.jellema.rick.services.interfaces.IPlaylistService
-  nl.han.oose.jellema.rick.services.PlaylistService o-- nl.han.oose.jellema.rick.services.interfaces.ICache : cache
-  nl.han.oose.jellema.rick.services.PlaylistService o-- nl.han.oose.jellema.rick.data.dao.interfaces.IPlaylistsDao : playlistsDao
-  nl.han.oose.jellema.rick.services.PlaylistService o-- nl.han.oose.jellema.rick.data.dao.interfaces.ITracksDao : tracksDao
-  nl.han.oose.jellema.rick.services.TokenDealer .up.|> nl.han.oose.jellema.rick.services.interfaces.ITokenDealer
-  nl.han.oose.jellema.rick.services.TracksService .up.|> nl.han.oose.jellema.rick.services.interfaces.ITracksService
-  nl.han.oose.jellema.rick.services.TracksService o-- nl.han.oose.jellema.rick.services.interfaces.ICache : cache
-  nl.han.oose.jellema.rick.services.TracksService o-- nl.han.oose.jellema.rick.data.dao.interfaces.ITracksDao : dao
+  nl.han.oose.jellema.rick.datalayer.dao.PlaylistsDao .up.|> nl.han.oose.jellema.rick.servicelayer.services.IPlaylistsDao
+  nl.han.oose.jellema.rick.datalayer.dao.PlaylistsDao o-- nl.han.oose.jellema.rick.datalayer.database.Database : database
+  nl.han.oose.jellema.rick.datalayer.dao.TracksDao .up.|> nl.han.oose.jellema.rick.servicelayer.services.ITracksDao
+  nl.han.oose.jellema.rick.datalayer.dao.TracksDao o-- nl.han.oose.jellema.rick.datalayer.database.Database : database
+  nl.han.oose.jellema.rick.datalayer.dao.UserDao .up.|> nl.han.oose.jellema.rick.servicelayer.services.IUserDao
+  nl.han.oose.jellema.rick.datalayer.database.Database o-- nl.han.oose.jellema.rick.servicelayer.utils.PropertiesFiles : loadProperties
+  nl.han.oose.jellema.rick.resourcelayer.LoginResource o-- nl.han.oose.jellema.rick.resourcelayer.ILoginService : loginService
+  nl.han.oose.jellema.rick.resourcelayer.PlaylistResource o-- nl.han.oose.jellema.rick.resourcelayer.IPlaylistService : playListService
+  nl.han.oose.jellema.rick.resourcelayer.TrackResource o-- nl.han.oose.jellema.rick.resourcelayer.ITracksService : tracksService
+  nl.han.oose.jellema.rick.resourcelayer.mappers.AuthenticationExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
+  nl.han.oose.jellema.rick.resourcelayer.mappers.DatabaseExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
+  nl.han.oose.jellema.rick.resourcelayer.mappers.FileNotFoundExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
+  nl.han.oose.jellema.rick.resourcelayer.mappers.InvalidTokenExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
+  nl.han.oose.jellema.rick.resourcelayer.mappers.TrackDoesNotExistExceptionMapper .up.|> javax.ws.rs.ext.ExceptionMapper
+  nl.han.oose.jellema.rick.servicelayer.Cache .up.|> nl.han.oose.jellema.rick.resourcelayer.ICache
+  nl.han.oose.jellema.rick.servicelayer.LoginService .up.|> nl.han.oose.jellema.rick.resourcelayer.ILoginService
+  nl.han.oose.jellema.rick.servicelayer.LoginService o-- nl.han.oose.jellema.rick.resourcelayer.ICache : cache
+  nl.han.oose.jellema.rick.servicelayer.LoginService o-- nl.han.oose.jellema.rick.resourcelayer.ITokenDealer : dealer
+  nl.han.oose.jellema.rick.servicelayer.PlaylistService .up.|> nl.han.oose.jellema.rick.resourcelayer.IPlaylistService
+  nl.han.oose.jellema.rick.servicelayer.PlaylistService o-- nl.han.oose.jellema.rick.resourcelayer.ICache : cache
+  nl.han.oose.jellema.rick.servicelayer.PlaylistService o-- nl.han.oose.jellema.rick.servicelayer.services.IPlaylistsDao : playlistsDao
+  nl.han.oose.jellema.rick.servicelayer.PlaylistService o-- nl.han.oose.jellema.rick.servicelayer.services.ITracksDao : tracksDao
+  nl.han.oose.jellema.rick.servicelayer.TokenDealer .up.|> nl.han.oose.jellema.rick.resourcelayer.ITokenDealer
+  nl.han.oose.jellema.rick.servicelayer.TracksService .up.|> nl.han.oose.jellema.rick.resourcelayer.ITracksService
+  nl.han.oose.jellema.rick.servicelayer.TracksService o-- nl.han.oose.jellema.rick.resourcelayer.ICache : cache
+  nl.han.oose.jellema.rick.servicelayer.TracksService o-- nl.han.oose.jellema.rick.servicelayer.services.ITracksDao : dao
 
 
 right footer
