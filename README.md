@@ -15,7 +15,7 @@ Gebruik je eigen deployment configuratie of pak de map RunConfiguration waar dez
 Wijzig natuurlijk wel je Apache tomee plus configuratie. Want mijn installatie path daarvan is anders dan van jou.
 
 Probeer nu de applicatie te draaien.
-Mocht je er toch niet uitkomen. Mail mij dan op rijellema@outlook.com | r.jellema@student.han.nl of mocht je mij hebben Microsoft Teams dan kun je mij daarop contacteren.
+Mocht je er toch niet uitkomen dan is dat helaas pech. 
 
 
 
